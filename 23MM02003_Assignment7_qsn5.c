@@ -1,5 +1,13 @@
 #include <stdio.h>
-#include <string.h>
+int Length(char str[]) {
+    int length = 0;
+    
+    while (str[length] != '\0') {
+        length++;
+    }
+    return length;
+}
+
 
 int main() {
     char str[100];
@@ -8,7 +16,7 @@ int main() {
     printf("Enter the string: ");
     gets(str);
 
-    int len = strlen(str);
+    int len=Length(str);
 
     for (i = 0; i < len / 2; i++) {
         if (str[i] != str[len - i - 1]) {
